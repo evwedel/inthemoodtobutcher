@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<!-- saved from url=(0236)file:///Users/edzardwedel/Library/Application%20Support/Claude/local-agent-mode-sessions/eeee45c2-04eb-4d35-a529-5a6e155b788e/d36a8408-a9a0-436a-9c6b-c103630ebfe7/local_eab22a77-07db-4229-bea3-945913f7d543/outputs/butcher_moodboard.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Butcher Shop Moodboard — v5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./The Butcher Shop Moodboard _files/css2" rel="stylesheet">
+<style>
+  :root {
+    --bg: #15100e;
+    --bg-soft: #1f1814;
+    --card: #2a1f1a;
+    --card-hover: #352720;
+    --cream: #f4ece0;
+    --cream-dim: #d9cebc;
+    --cream-mute: #9d9080;
+    --brass: #c9a961;
+    --brass-bright: #e6c884;
+    --blood: #8b2e2e;
+    --heart: #e85a5a;
+    --border: #3a2c24;
+    --shadow: 0 12px 40px rgba(0,0,0,0.6);
+    --shadow-lg: 0 24px 80px rgba(0,0,0,0.8);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--cream);
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.5; -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(at 20% 0%, rgba(139, 46, 46, 0.12) 0px, transparent 50%),
+      radial-gradient(at 80% 100%, rgba(201, 169, 97, 0.06) 0px, transparent 50%);
+    min-height: 100vh;
+  }
+  .hero { position: relative; padding: 90px 24px 60px; text-align: center; overflow: hidden; }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(180deg, rgba(21,16,14,0.55) 0%, rgba(21,16,14,0.95) 100%),
+      url('https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4375_1-v2.jpg');
+    background-size: cover; background-position: center; z-index: -1;
+  }
+  .eyebrow { font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--brass); margin-bottom: 18px; font-weight: 500; }
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(40px, 6vw, 72px); font-weight: 400;
+    color: var(--cream); letter-spacing: -0.01em; line-height: 1.05; margin-bottom: 20px;
+  }
+  h1 em { font-style: italic; color: var(--brass-bright); }
+  .subtitle { font-size: 16px; color: var(--cream-dim); max-width: 660px; margin: 0 auto 40px; font-weight: 300; line-height: 1.6; }
+  .hero-stats { display: inline-flex; gap: 36px; padding: 20px 32px; border: 1px solid var(--border); border-radius: 4px; background: rgba(21,16,14,0.6); backdrop-filter: blur(8px); }
+  .hero-stat { text-align: center; }
+  .hero-stat-num { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--brass-bright); line-height: 1; }
+  .hero-stat-lbl { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--cream-mute); margin-top: 6px; }
+  .hero-stat .heart-num { color: var(--heart); }
+
+  .section-title { max-width: 1400px; margin: 80px auto 24px; padding: 0 24px; }
+  .section-title h2 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 400; color: var(--cream); margin-bottom: 8px; }
+  .section-title h2 em { font-style: italic; color: var(--brass-bright); }
+  .section-title p { color: var(--cream-mute); font-size: 14px; max-width: 600px; }
+
+  /* Vibe board */
+  .vibe-board { max-width: 1400px; margin: 0 auto; padding: 0 24px; column-count: 4; column-gap: 12px; }
+  @media (max-width: 1100px) { .vibe-board { column-count: 3; } }
+  @media (max-width: 700px) { .vibe-board { column-count: 2; } }
+  .vibe-item { width: 100%; margin-bottom: 12px; position: relative; border-radius: 4px; overflow: hidden; cursor: pointer; }
+  .vibe-img { width: 100%; display: block; transition: transform 0.4s ease, filter 0.4s ease; filter: brightness(0.92) contrast(1.05); }
+  .vibe-item:hover .vibe-img { transform: scale(1.02); filter: brightness(1) contrast(1.1); }
+
+  /* Universal heart button */
+  .heart-btn {
+    position: absolute; top: 10px; right: 10px;
+    background: rgba(0,0,0,0.55); backdrop-filter: blur(6px);
+    color: var(--cream); border: 1px solid var(--border);
+    width: 36px; height: 36px; border-radius: 50%;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s; z-index: 3;
+    font-size: 16px; line-height: 1;
+  }
+  .heart-btn:hover { background: rgba(0,0,0,0.85); transform: scale(1.1); }
+  .heart-btn.liked { background: var(--heart); border-color: var(--heart); color: white; }
+  .heart-btn.liked:hover { background: #d04545; }
+  .heart-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; }
+  .heart-btn.liked svg { fill: white; stroke: white; }
+
+  /* Filters */
+  .filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; padding: 32px 24px 0; }
+  .filter-btn { background: transparent; color: var(--cream-dim); border: 1px solid var(--border); padding: 9px 20px; border-radius: 999px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: all 0.25s ease; font-family: inherit; font-weight: 500; }
+  .filter-btn:hover { color: var(--cream); border-color: var(--brass); }
+  .filter-btn.active { background: var(--brass); color: var(--bg); border-color: var(--brass); }
+
+  /* Shop grid */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; max-width: 1400px; margin: 0 auto; padding: 32px 24px 80px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; cursor: pointer; transition: all 0.3s ease; display: flex; flex-direction: column; position: relative; }
+  .card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--brass); }
+  .card-img-wrap { aspect-ratio: 4/3; overflow: hidden; position: relative; background: var(--card); }
+  .card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; filter: brightness(0.95); }
+  .card:hover .card-img { transform: scale(1.05); filter: brightness(1.05); }
+  .card-img-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.7) 100%); pointer-events: none; }
+  .card-gallery-count { position: absolute; top: 12px; right: 56px; background: rgba(21,16,14,0.85); backdrop-filter: blur(6px); color: var(--brass-bright); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border); }
+  .card-heritage-badge { position: absolute; top: 12px; left: 12px; background: rgba(139,46,46,0.9); backdrop-filter: blur(6px); color: var(--cream); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; font-weight: 500; }
+  .card-real-badge { position: absolute; bottom: 12px; left: 12px; background: rgba(201,169,97,0.95); color: var(--bg); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; padding: 5px 9px; border-radius: 999px; font-weight: 600; }
+  .card-body { padding: 22px 24px 24px; flex: 1; display: flex; flex-direction: column; }
+  .city-pill { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--brass); margin-bottom: 10px; font-weight: 500; }
+  .card h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 500; color: var(--cream); margin-bottom: 4px; line-height: 1.2; }
+  .card .location { font-size: 13px; color: var(--cream-mute); margin-bottom: 14px; font-style: italic; }
+  .card .feature { font-size: 13.5px; color: var(--cream-dim); line-height: 1.55; }
+  .card .read-more { display: inline-block; margin-top: 18px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); border-bottom: 1px solid var(--brass); padding-bottom: 2px; align-self: flex-start; font-weight: 500; }
+
+  /* Modal */
+  .modal-bg { position: fixed; inset: 0; background: rgba(8, 5, 4, 0.92); backdrop-filter: blur(8px); display: none; align-items: flex-start; justify-content: center; z-index: 100; padding: 24px; overflow-y: auto; }
+  .modal-bg.open { display: flex; }
+  .modal { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 6px; max-width: 980px; width: 100%; box-shadow: var(--shadow-lg); position: relative; margin: auto; }
+  .modal-hero { height: 380px; background: var(--card); position: relative; overflow: hidden; border-radius: 6px 6px 0 0; }
+  .modal-hero img { width: 100%; height: 100%; object-fit: cover; }
+  .modal-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 40%, rgba(31,24,20,0.95) 100%); pointer-events: none; }
+  .modal-close { position: absolute; top: 18px; right: 18px; background: rgba(0,0,0,0.5); color: var(--cream); border: 1px solid var(--border); width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 18px; z-index: 5; display: flex; align-items: center; justify-content: center; transition: all 0.2s; backdrop-filter: blur(6px); }
+  .modal-close:hover { background: var(--blood); border-color: var(--blood); }
+  .modal-body { padding: 36px 40px 40px; }
+  .modal-city { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--brass); margin-bottom: 10px; font-weight: 500; }
+  .modal h2 { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 400; color: var(--cream); margin-bottom: 8px; line-height: 1.1; }
+  .modal h2 em { font-style: italic; color: var(--brass-bright); }
+  .modal .modal-feature { font-size: 15px; color: var(--cream-dim); font-style: italic; margin-bottom: 32px; line-height: 1.55; }
+  .modal-section { margin-bottom: 32px; }
+  .modal-section h4 { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--brass); margin-bottom: 14px; font-weight: 500; }
+  .modal-section p { font-size: 15px; color: var(--cream-dim); line-height: 1.7; }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; }
+  .gallery-img { aspect-ratio: 1; overflow: hidden; border-radius: 3px; cursor: pointer; position: relative; background: var(--card); }
+  .gallery-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease, filter 0.3s ease; filter: brightness(0.92); }
+  .gallery-img:hover img { transform: scale(1.08); filter: brightness(1.05); }
+  .gallery-img .gallery-zoom { position: absolute; top: 8px; left: 8px; color: var(--cream); background: rgba(0,0,0,0.6); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; opacity: 0; transition: opacity 0.2s; }
+  .gallery-img:hover .gallery-zoom { opacity: 1; }
+  .modal-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .modal-tag { font-size: 11px; letter-spacing: 0.1em; color: var(--cream-dim); background: var(--card); border: 1px solid var(--border); padding: 7px 13px; border-radius: 999px; }
+  .modal-links { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+  .modal-link { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--bg); background: var(--brass); padding: 14px 24px; border-radius: 2px; text-decoration: none; transition: all 0.2s; font-weight: 500; }
+  .modal-link:hover { background: var(--brass-bright); }
+  .modal-link.secondary { background: transparent; color: var(--cream); border: 1px solid var(--border); }
+  .modal-link.secondary:hover { border-color: var(--brass); color: var(--brass); }
+
+  /* Lightbox */
+  .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.95); display: none; align-items: center; justify-content: center; z-index: 200; padding: 40px; cursor: zoom-out; }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 20px 80px rgba(0,0,0,0.8); }
+  .lightbox-close { position: fixed; top: 24px; right: 24px; background: rgba(0,0,0,0.5); color: var(--cream); border: 1px solid var(--border); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 22px; display: flex; align-items: center; justify-content: center; }
+  .lightbox-heart { position: fixed; top: 24px; right: 80px; background: rgba(0,0,0,0.5); color: var(--cream); border: 1px solid var(--border); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .lightbox-heart svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; }
+  .lightbox-heart.liked { background: var(--heart); border-color: var(--heart); }
+  .lightbox-heart.liked svg { fill: white; stroke: white; }
+
+  /* Liked section */
+  .liked-board {
+    max-width: 1400px;
+    margin: 60px auto 0;
+    padding: 48px 24px;
+    background: linear-gradient(180deg, rgba(232, 90, 90, 0.04) 0%, transparent 100%);
+    border-top: 1px solid var(--border);
+  }
+  .liked-board-inner { max-width: 1200px; margin: 0 auto; }
+  .liked-grid { column-count: 4; column-gap: 10px; }
+  @media (max-width: 900px) { .liked-grid { column-count: 3; } }
+  @media (max-width: 600px) { .liked-grid { column-count: 2; } }
+  .liked-item { width: 100%; margin-bottom: 10px; position: relative; border-radius: 3px; overflow: hidden; cursor: pointer; }
+  .liked-item img { width: 100%; display: block; transition: transform 0.3s; filter: brightness(0.92); }
+  .liked-item:hover img { transform: scale(1.03); filter: brightness(1.05); }
+  .liked-empty { text-align: center; padding: 60px 20px; color: var(--cream-mute); font-style: italic; font-size: 14px; border: 1px dashed var(--border); border-radius: 4px; }
+  .liked-empty .heart-icon { color: var(--heart); font-size: 24px; display: block; margin-bottom: 12px; }
+
+  /* Your board */
+  .your-board { max-width: 1400px; margin: 0 auto; padding: 48px 24px; background: linear-gradient(180deg, rgba(201,169,97,0.04) 0%, transparent 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .your-board-inner { max-width: 900px; margin: 0 auto; }
+  .your-board-callout { background: rgba(201,169,97,0.08); border: 1px solid var(--brass); border-radius: 4px; padding: 20px 24px; margin-bottom: 32px; color: var(--cream-dim); font-size: 14px; line-height: 1.6; }
+  .your-board-callout strong { color: var(--brass-bright); font-weight: 600; }
+  .your-form { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+  .your-form input { flex: 1; min-width: 280px; background: var(--card); color: var(--cream); border: 1px solid var(--border); padding: 14px 18px; font-size: 14px; font-family: inherit; border-radius: 3px; }
+  .your-form input:focus { outline: none; border-color: var(--brass); }
+  .your-form button { background: var(--brass); color: var(--bg); border: none; padding: 14px 28px; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; border-radius: 3px; font-family: inherit; font-weight: 600; transition: background 0.2s; }
+  .your-form button:hover { background: var(--brass-bright); }
+  .your-hint { font-size: 12px; color: var(--cream-mute); margin-bottom: 24px; line-height: 1.5; }
+  .your-grid { column-count: 4; column-gap: 10px; }
+  @media (max-width: 900px) { .your-grid { column-count: 3; } }
+  @media (max-width: 600px) { .your-grid { column-count: 2; } }
+  .your-item { width: 100%; margin-bottom: 10px; position: relative; cursor: pointer; border-radius: 3px; overflow: hidden; }
+  .your-item img { width: 100%; display: block; transition: transform 0.3s, filter 0.3s; filter: brightness(0.92); }
+  .your-item:hover img { transform: scale(1.03); filter: brightness(1.05); }
+  .your-item-remove { position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7); color: var(--cream); border: 1px solid var(--border); width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s, background 0.2s; }
+  .your-item:hover .your-item-remove { opacity: 1; }
+  .your-item-remove:hover { background: var(--blood); }
+  .your-empty { text-align: center; padding: 60px 20px; color: var(--cream-mute); font-style: italic; font-size: 14px; border: 1px dashed var(--border); border-radius: 4px; }
+
+  footer { text-align: center; padding: 50px 24px 40px; border-top: 1px solid var(--border); color: var(--cream-mute); font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; margin-top: 40px; }
+  footer .footnote { margin-top: 14px; color: #6b5a4c; font-size: 11px; text-transform: none; letter-spacing: 0.05em; max-width: 640px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+  img { background: var(--card); }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .card, .vibe-item, .your-item, .liked-item { animation: fadeIn 0.5s ease both; }
+  @keyframes pop { 0% { transform: scale(1); } 50% { transform: scale(1.3); } 100% { transform: scale(1.1); } }
+  .heart-btn.just-liked { animation: pop 0.4s ease; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="eyebrow">Design Reference · v5</div>
+  <h1>The Butcher Shop <em>Moodboard</em></h1>
+  <p class="subtitle">A curated reference of the world's most beautifully designed butcher shops — now with The Hyun (NYC), The Istanbul Butcher, and a heart button on every image so you can collect favorites as you browse.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="hero-stat-num">22</div><div class="hero-stat-lbl">Shops</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">6</div><div class="hero-stat-lbl">Cities</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">11</div><div class="hero-stat-lbl">With Real Photos</div></div>
+    <div class="hero-stat"><div class="hero-stat-num heart-num" id="likeCount">0</div><div class="hero-stat-lbl">Your Likes</div></div>
+  </div>
+</div>
+
+<div class="section-title">
+  <h2>The <em>Vibe</em></h2>
+  <p>A masonry wall of actual shop photography from Victor Churchill, Istanbul Butcher, Schaller &amp; Weber, HG Walter, Peter Bouchier, and more. Hover any image to like it ♥</p>
+</div>
+
+<div class="vibe-board" id="vibeBoard"><div class="vibe-item" style="animation-delay: 0ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/interior.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://victorchurchill.com/cdn/shop/t/55/assets/interior.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 30ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/mbp_4422_1600px.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4422_1600px.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 60ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/exterior.jpeg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://victorchurchill.com/cdn/shop/t/55/assets/exterior.jpeg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 90ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/mbp_4487_1600px.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4487_1600px.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 120ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/HG_Walter_shop_counter_1000x.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://www.hgwalter.com/cdn/shop/files/HG_Walter_shop_counter_1000x.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 150ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/mbp_4300_1600px.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4300_1600px.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 180ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/schaller-weber-store-circa-1941.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://schallerweber.com/cdn/shop/files/schaller-weber-store-circa-1941.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 210ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/ageing.jpeg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://victorchurchill.com/cdn/shop/t/55/assets/ageing.jpeg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 240ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/June_2024_Photoshoot_SimonShiff_16.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://www.petergbouchier.com.au/cdn/shop/files/June_2024_Photoshoot_SimonShiff_16.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 270ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/mbp_4131_1600px.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4131_1600px.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 300ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/charcuterie.jpeg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://victorchurchill.com/cdn/shop/t/55/assets/charcuterie.jpeg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 330ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/A7A3130_7a429a6c-ea2e-480d-8297-8585fca76cb0_600x.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://www.vicsmeat.com.au/cdn/shop/articles/A7A3130_7a429a6c-ea2e-480d-8297-8585fca76cb0_600x.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 360ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/schaller-weber-store-customer-meat-display.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://schallerweber.com/cdn/shop/files/schaller-weber-store-customer-meat-display.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 390ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/mbp_4243_1600px.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4243_1600px.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 420ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/June_2024_Photoshoot_SimonShiff_18.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://www.petergbouchier.com.au/cdn/shop/files/June_2024_Photoshoot_SimonShiff_18.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 450ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/details.jpeg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://victorchurchill.com/cdn/shop/t/55/assets/details.jpeg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 480ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/himalayan_salt_fridge_01_1db466ed-68ae-4d3d-8a0b-1ac8765e5a16_1000x.png" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://www.hgwalter.com/cdn/shop/files/himalayan_salt_fridge_01_1db466ed-68ae-4d3d-8a0b-1ac8765e5a16_1000x.png" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 510ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/mbp_4338_1600px.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4338_1600px.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 540ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/GingerPig_MoxonSt_2x_b48667e9-7ce5-4ee8-b76b-908e8d1060a5_614x258.webp" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://thegingerpig.co.uk/wp-content/uploads/2023/09/GingerPig_MoxonSt_2x_b48667e9-7ce5-4ee8-b76b-908e8d1060a5_614x258.webp" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 570ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/schaller-weber-vintage-car.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://schallerweber.com/cdn/shop/files/schaller-weber-vintage-car.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 600ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/32274MarlowandDaughters_summer_2022-107.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://images.getbento.com/accounts/9b538b411969012cae21d9538f3b2813/media/images/32274MarlowandDaughters_summer_2022-107.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 630ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/mbp_4432_1600px.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4432_1600px.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 660ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/ChadstoneLaunch_VicsMeats_March2025_Socials_006_600x.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://www.vicsmeat.com.au/cdn/shop/articles/ChadstoneLaunch_VicsMeats_March2025_Socials_006_600x.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div><div class="vibe-item" style="animation-delay: 690ms;">
+    <img class="vibe-img" src="./The Butcher Shop Moodboard _files/mbp_4456_1600px.jpg" loading="lazy" alt="Butcher shop atmosphere">
+    <button class="heart-btn" data-url="https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4456_1600px.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+  </div></div>
+
+<div class="section-title" id="shops">
+  <h2>The <em>Shops</em></h2>
+  <p>22 design-celebrated butcher shops across 6 cities. Cards marked <strong style="color: var(--brass-bright);">"★ REAL PHOTOS"</strong> show actual shop imagery. Click any card for the full gallery — like individual images as you browse.</p>
+</div>
+
+<div class="filters" id="filters">
+  <button class="filter-btn active" data-filter="all">All Cities</button>
+  <button class="filter-btn" data-filter="sydney">Sydney</button>
+  <button class="filter-btn" data-filter="london">London</button>
+  <button class="filter-btn" data-filter="paris">Paris</button>
+  <button class="filter-btn" data-filter="newyork">New York</button>
+  <button class="filter-btn" data-filter="melbourne">Melbourne</button>
+  <button class="filter-btn" data-filter="istanbul">Istanbul</button>
+</div>
+
+<main class="grid" id="grid"><div class="card" style="animation-delay: 0ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/interior.jpg" alt="Victor Churchill" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 1876</div>
+        <div class="card-gallery-count">12 pics</div>
+        <button class="heart-btn" data-url="https://victorchurchill.com/cdn/shop/t/55/assets/interior.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        <div class="card-real-badge">★ Real Photos</div>
+      </div>
+      <div class="card-body">
+        <div class="city-pill">Australia</div>
+        <h3>Victor Churchill</h3>
+        <div class="location">Woollahra, Sydney</div>
+        <div class="feature">Anthony Bourdain called it 'the most beautiful butcher shop in the world.' Himalayan pink salt walls, brass fittings, marble counters, glass-walled dry-aging cabinet.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 40ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/mbp_4375_1-v2.jpg" alt="The Istanbul Butcher" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 2017 (Nezih Gıda since 1962)</div>
+        <div class="card-gallery-count">11 pics</div>
+        <button class="heart-btn" data-url="https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4375_1-v2.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        <div class="card-real-badge">★ Real Photos</div>
+      </div>
+      <div class="card-body">
+        <div class="city-pill">Turkey</div>
+        <h3>The Istanbul Butcher</h3>
+        <div class="location">Kadıköy, Istanbul</div>
+        <div class="feature">Designed by Michael McCann — the same architect behind Victor Churchill. Brass, marble, theatrical 'Butcher Theater' space showcasing the craft.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 80ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/66e03e201d1cb84078dcf6e4_Maestro Collection Gift Sets-min.jpg" alt="The Hyun" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 2024</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://cdn.prod.website-files.com/666d9613832653f698f779d2/66e03e201d1cb84078dcf6e4_Maestro%20Collection%20Gift%20Sets-min.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        
+      </div>
+      <div class="card-body">
+        <div class="city-pill">USA</div>
+        <h3>The Hyun</h3>
+        <div class="location">Gramercy Park, NYC</div>
+        <div class="feature">Premium Japanese Wagyu boutique with Japanese minimalist aesthetic. Glossy black marble, glowing display shelves — closer to a Chanel boutique than a butcher shop.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 120ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/photo-1597417321971-45e034f7a993" alt="Hill &amp; Szrok" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 2013</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://images.unsplash.com/photo-1597417321971-45e034f7a993?w=800&amp;q=80&amp;auto=format&amp;fit=crop" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        
+      </div>
+      <div class="card-body">
+        <div class="city-pill">UK</div>
+        <h3>Hill &amp; Szrok</h3>
+        <div class="location">Broadway Market, London</div>
+        <div class="feature">Marble-topped communal table doubles as a butcher counter by day and a chef's-table restaurant by night.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 160ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/photo-1736517884171-a981a34e78a4" alt="Hugo Desnoyer" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 2006</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://images.unsplash.com/photo-1736517884171-a981a34e78a4?w=800&amp;q=80&amp;auto=format&amp;fit=crop" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        
+      </div>
+      <div class="card-body">
+        <div class="city-pill">France</div>
+        <h3>Hugo Desnoyer</h3>
+        <div class="location">16th arr., Paris</div>
+        <div class="feature">Dark, gallery-like interior with paintings on the walls. Meat displayed like art objects.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 200ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/photo-1584873069262-427e437b8eb4" alt="Dickson&#39;s Farmstand Meats" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 2009</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://images.unsplash.com/photo-1584873069262-427e437b8eb4?w=800&amp;q=80&amp;auto=format&amp;fit=crop" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        
+      </div>
+      <div class="card-body">
+        <div class="city-pill">USA</div>
+        <h3>Dickson's Farmstand Meats</h3>
+        <div class="location">Chelsea Market, NYC</div>
+        <div class="feature">Inside iconic Chelsea Market. Bright white tile, polished stainless, blackboard signage. Every cut labeled with the farm of origin.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 240ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/schaller-weber-store-circa-1941.jpg" alt="Schaller &amp; Weber" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 1937</div>
+        <div class="card-gallery-count">6 pics</div>
+        <button class="heart-btn" data-url="https://schallerweber.com/cdn/shop/files/schaller-weber-store-circa-1941.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        <div class="card-real-badge">★ Real Photos</div>
+      </div>
+      <div class="card-body">
+        <div class="city-pill">USA</div>
+        <h3>Schaller &amp; Weber</h3>
+        <div class="location">Upper East Side, NYC</div>
+        <div class="feature">1937 German butcher at 86th &amp; 2nd. Original storefront with vintage signage, hanging salamis.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 280ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/photo-1632084687062-522d7b1d4b95" alt="Allens of Mayfair" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 1830</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://images.unsplash.com/photo-1632084687062-522d7b1d4b95?w=800&amp;q=80&amp;auto=format&amp;fit=crop" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        
+      </div>
+      <div class="card-body">
+        <div class="city-pill">UK</div>
+        <h3>Allens of Mayfair</h3>
+        <div class="location">Mayfair, London</div>
+        <div class="feature">London's oldest butcher. Black-and-gold shopfront, mahogany interior, brass rails. Royal warrant heritage.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 320ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/photo-1759026562009-c50112f4fe93" alt="The Meat Hook" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 2009</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://images.unsplash.com/photo-1759026562009-c50112f4fe93?w=800&amp;q=80&amp;auto=format&amp;fit=crop" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        
+      </div>
+      <div class="card-body">
+        <div class="city-pill">USA</div>
+        <h3>The Meat Hook</h3>
+        <div class="location">Williamsburg, NYC</div>
+        <div class="feature">Brooklyn whole-animal butchery. 100% grass-fed beef, pasture-raised pork. Tattoo-shop swagger applied to butchery.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 360ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/photo-1542581482-851c38ee4b94" alt="Maison Le Bourdonnec" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 1996</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://images.unsplash.com/photo-1542581482-851c38ee4b94?w=800&amp;q=80&amp;auto=format&amp;fit=crop" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        
+      </div>
+      <div class="card-body">
+        <div class="city-pill">France</div>
+        <h3>Maison Le Bourdonnec</h3>
+        <div class="location">5 Paris arrondissements</div>
+        <div class="feature">Yves-Marie Le Bourdonnec's modern empire. Sleek black storefronts in the 6th, 7th, 8th, 16th, 17th.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 400ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/photo-1602470521007-20293bd1fd31" alt="The Butchery Ltd" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 2012</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://images.unsplash.com/photo-1602470521007-20293bd1fd31?w=800&amp;q=80&amp;auto=format&amp;fit=crop" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        
+      </div>
+      <div class="card-body">
+        <div class="city-pill">UK</div>
+        <h3>The Butchery Ltd</h3>
+        <div class="location">Bermondsey, London</div>
+        <div class="feature">Whole-animal butchery in Bermondsey's Spa Terminus. Pared-back Scandi-British minimalism. Rare native breeds.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 440ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/June_2024_Photoshoot_SimonShiff_16.jpg" alt="Peter Bouchier" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 1983</div>
+        <div class="card-gallery-count">6 pics</div>
+        <button class="heart-btn" data-url="https://www.petergbouchier.com.au/cdn/shop/files/June_2024_Photoshoot_SimonShiff_16.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        <div class="card-real-badge">★ Real Photos</div>
+      </div>
+      <div class="card-body">
+        <div class="city-pill">Australia</div>
+        <h3>Peter Bouchier</h3>
+        <div class="location">Toorak + Malvern, Melbourne</div>
+        <div class="feature">Melbourne's premium butcher for 40+ years. Toorak flagship + Malvern with state-of-the-art dry-aging cabinet.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 480ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/photo-1695606392727-d8b959879721" alt="Cannings Free Range Butchers" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 2010</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://images.unsplash.com/photo-1695606392727-d8b959879721?w=800&amp;q=80&amp;auto=format&amp;fit=crop" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        
+      </div>
+      <div class="card-body">
+        <div class="city-pill">Australia</div>
+        <h3>Cannings Free Range Butchers</h3>
+        <div class="location">Multiple, Melbourne</div>
+        <div class="feature">Melbourne's most trusted free-range and high-welfare butcher. Warm timber and educational signage.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 520ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/photo-1584873069262-427e437b8eb4" alt="Boucherie Polmard" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">6 generations</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://images.unsplash.com/photo-1584873069262-427e437b8eb4?w=800&amp;q=80&amp;auto=format&amp;fit=crop" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        
+      </div>
+      <div class="card-body">
+        <div class="city-pill">France</div>
+        <h3>Boucherie Polmard</h3>
+        <div class="location">6th &amp; 7th arr., Paris</div>
+        <div class="feature">Six-generation family from Meuse. Blonde d'Aquitaine cattle raised on their own farm. Beef aged using 'hibernation' technique.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 560ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/HG_Walter_shop_counter_1000x.jpg" alt="HG Walter" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 1972</div>
+        <div class="card-gallery-count">6 pics</div>
+        <button class="heart-btn" data-url="https://www.hgwalter.com/cdn/shop/files/HG_Walter_shop_counter_1000x.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        <div class="card-real-badge">★ Real Photos</div>
+      </div>
+      <div class="card-body">
+        <div class="city-pill">UK</div>
+        <h3>HG Walter</h3>
+        <div class="location">Barons Court, London</div>
+        <div class="feature">Family butcher since 1972. Custom Himalayan salt room for 28-90 day dry aging. Supplies River Café and many Michelin kitchens.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 600ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/32274MarlowandDaughters_summer_2022-107.jpg" alt="Marlow &amp; Daughters" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 2009</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://images.getbento.com/accounts/9b538b411969012cae21d9538f3b2813/media/images/32274MarlowandDaughters_summer_2022-107.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        <div class="card-real-badge">★ Real Photos</div>
+      </div>
+      <div class="card-body">
+        <div class="city-pill">USA</div>
+        <h3>Marlow &amp; Daughters</h3>
+        <div class="location">Williamsburg, NYC</div>
+        <div class="feature">Whole-animal butchery from upstate NY farms. Sister to Diner/Marlow &amp; Sons. Reclaimed wood and hand-illustrated charts.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 640ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/A7A3130_7a429a6c-ea2e-480d-8297-8585fca76cb0_600x.jpg" alt="Vic&#39;s Premium Quality Meat" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 1996</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://www.vicsmeat.com.au/cdn/shop/articles/A7A3130_7a429a6c-ea2e-480d-8297-8585fca76cb0_600x.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        <div class="card-real-badge">★ Real Photos</div>
+      </div>
+      <div class="card-body">
+        <div class="city-pill">Australia</div>
+        <h3>Vic's Premium Quality Meat</h3>
+        <div class="location">Bondi/Chatswood/Mascot Sydney + Chadstone Melbourne</div>
+        <div class="feature">Sydney's chef's butcher. Industrial dry-aging walls visible through glass. Four retail showrooms.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 680ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/photo-1632084687062-522d7b1d4b95" alt="The Quality Chop Shop" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 1869 (shop 2017)</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://images.unsplash.com/photo-1632084687062-522d7b1d4b95?w=800&amp;q=80&amp;auto=format&amp;fit=crop" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        
+      </div>
+      <div class="card-body">
+        <div class="city-pill">UK</div>
+        <h3>The Quality Chop Shop</h3>
+        <div class="location">Farringdon, London</div>
+        <div class="feature">Butcher and café next door to the legendary 150-year-old Quality Chop House restaurant.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 720ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/aboutusrichjamesdesktop_1.png" alt="Turner &amp; George" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 2010</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://cdn.shopify.com/s/files/1/0566/5642/9115/files/aboutusrichjamesdesktop_1.png" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        <div class="card-real-badge">★ Real Photos</div>
+      </div>
+      <div class="card-body">
+        <div class="city-pill">UK</div>
+        <h3>Turner &amp; George</h3>
+        <div class="location">St John Street, London</div>
+        <div class="feature">Founded by Hawksmoor/Pitt Cue chef Richard Turner + butcher James George. Near Fergus Henderson's St. John.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 760ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/GingerPig_MoxonSt_2x_b48667e9-7ce5-4ee8-b76b-908e8d1060a5_614x258.webp" alt="The Ginger Pig" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 1998</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://thegingerpig.co.uk/wp-content/uploads/2023/09/GingerPig_MoxonSt_2x_b48667e9-7ce5-4ee8-b76b-908e8d1060a5_614x258.webp" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        <div class="card-real-badge">★ Real Photos</div>
+      </div>
+      <div class="card-body">
+        <div class="city-pill">UK</div>
+        <h3>The Ginger Pig</h3>
+        <div class="location">Marylebone + 7 branches, London</div>
+        <div class="feature">Eight London neighborhoods. Founded with three Tamworth pigs. Famous sausage rolls and roast lunches.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 800ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/shop-bgimg.jpg" alt="Keevil &amp; Keevil" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Smithfield since 1850</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://www.keevilandkeevil.co.uk/Themes/CoreTheme/KContent/images/shop-bgimg.jpg" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        <div class="card-real-badge">★ Real Photos</div>
+      </div>
+      <div class="card-body">
+        <div class="city-pill">UK</div>
+        <h3>Keevil &amp; Keevil</h3>
+        <div class="location">Smithfield Market, London</div>
+        <div class="feature">Oldest butcher in London's Smithfield Market — 175 years on site. Inside the Victorian iron-and-glass market hall.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div><div class="card" style="animation-delay: 840ms;">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./The Butcher Shop Moodboard _files/photo-1542581482-851c38ee4b94" alt="William Rose" loading="lazy">
+        <div class="card-img-overlay"></div>
+        <div class="card-heritage-badge">Est. 1862</div>
+        <div class="card-gallery-count">5 pics</div>
+        <button class="heart-btn" data-url="https://images.unsplash.com/photo-1542581482-851c38ee4b94?w=800&amp;q=80&amp;auto=format&amp;fit=crop" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  </button>
+        
+      </div>
+      <div class="card-body">
+        <div class="city-pill">UK</div>
+        <h3>William Rose</h3>
+        <div class="location">East Dulwich, London</div>
+        <div class="feature">Founded 1862 in Vauxhall, moved to East Dulwich 2005. Rare-breed beef, salt-marsh lamb, Blythburgh pork.</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    </div></main>
+
+<!-- LIKED SECTION -->
+<div class="liked-board" id="likedBoard">
+  <div class="liked-board-inner">
+    <div class="section-title" style="margin: 0 0 24px; padding: 0;">
+      <h2 style="display: flex; align-items: center; gap: 14px;">
+        <span style="color: var(--heart);">♥</span>
+        Your <em>Favorites</em>
+        <span style="font-size: 16px; color: var(--cream-mute); font-style: normal; margin-left: auto;" id="likedCounter"></span>
+      </h2>
+      <p>Every image you've liked across the board. Click to view full-size, click the heart to remove.</p>
+    </div>
+    <div class="liked-grid" id="likedGrid"><div class="liked-empty">
+      <span class="heart-icon">♥</span>
+      Click the heart on any image to save it here.<br>
+      Your favorites stay between sessions.
+    </div></div>
+  </div>
+</div>
+
+<!-- YOUR OWN -->
+<div class="your-board" id="yourBoard">
+  <div class="your-board-inner">
+    <div class="section-title" style="margin: 0 0 24px; padding: 0;">
+      <h2>Add Your <em>Own Inspiration</em></h2>
+      <p>Found a shot you love elsewhere? Paste any image URL here.</p>
+    </div>
+    <div class="your-board-callout">
+      <strong>How to use:</strong> Right-click any photo on a shop website, Pinterest, or Instagram → <em>"Copy image address"</em>, then paste below. Images you add can be liked too.
+    </div>
+    <form class="your-form" id="yourForm">
+      <input type="url" id="yourUrl" placeholder="Paste an image URL (https://...)" required="">
+      <button type="submit">Add Image</button>
+    </form>
+    <div class="your-hint">Tip — Instagram photos need to be opened in their own post URL first to grab the address.</div>
+    <div class="your-grid" id="yourGrid"><div class="your-empty">Your saved images will appear here. Add your first one above.</div></div>
+  </div>
+</div>
+
+<div class="modal-bg" id="modalBg"><div class="modal" id="modal"></div></div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <button class="lightbox-heart" id="lightboxHeart" onclick="toggleLikeCurrent()"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+  <img id="lightboxImg" src="file:///Users/edzardwedel/Library/Application%20Support/Claude/local-agent-mode-sessions/eeee45c2-04eb-4d35-a529-5a6e155b788e/d36a8408-a9a0-436a-9c6b-c103630ebfe7/local_eab22a77-07db-4229-bea3-945913f7d543/outputs/butcher_moodboard.html" alt="" onclick="closeLightbox()">
+</div>
+
+<footer>
+  <div>The Butcher Shop Moodboard · v5 · 22 shops, 11 with real photos, fully likeable</div>
+  <div class="footnote">Real shop imagery pulled from each butcher's public website where possible. Your likes and custom images are saved locally in your browser between sessions.</div>
+</footer>
+
+<script>
+// ============================================================
+// LIKES SYSTEM (localStorage)
+// ============================================================
+const LIKES_KEY = 'butcher_moodboard_likes';
+
+function loadLikes() {
+  try { return new Set(JSON.parse(localStorage.getItem(LIKES_KEY) || '[]')); }
+  catch { return new Set(); }
+}
+function saveLikes(set) { localStorage.setItem(LIKES_KEY, JSON.stringify([...set])); }
+
+let LIKES = loadLikes();
+
+function isLiked(url) { return LIKES.has(url); }
+function toggleLike(url) {
+  if (LIKES.has(url)) LIKES.delete(url);
+  else LIKES.add(url);
+  saveLikes(LIKES);
+  updateLikeUI();
+}
+
+function updateLikeUI() {
+  document.getElementById('likeCount').textContent = LIKES.size;
+  document.getElementById('likedCounter').textContent = LIKES.size > 0 ? `${LIKES.size} saved` : '';
+  // Update all heart buttons
+  document.querySelectorAll('.heart-btn').forEach(btn => {
+    const url = btn.dataset.url;
+    if (isLiked(url)) btn.classList.add('liked');
+    else btn.classList.remove('liked');
+  });
+  // Re-render liked grid
+  renderLikedGrid();
+  // Update lightbox heart
+  const lh = document.getElementById('lightboxHeart');
+  if (lh.dataset.url) {
+    if (isLiked(lh.dataset.url)) lh.classList.add('liked');
+    else lh.classList.remove('liked');
+  }
+}
+
+function heartButton(url) {
+  return `<button class="heart-btn ${isLiked(url) ? 'liked' : ''}" data-url="${url}" onclick="event.stopPropagation(); handleHeartClick(this)">
+    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+  </button>`;
+}
+
+function handleHeartClick(btn) {
+  const url = btn.dataset.url;
+  toggleLike(url);
+  btn.classList.add('just-liked');
+  setTimeout(() => btn.classList.remove('just-liked'), 400);
+}
+
+// ============================================================
+// DATA
+// ============================================================
+const UNS = (id, w = 800) => `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`;
+
+// Real Istanbul Butcher photos
+const ISTANBUL_IMGS = [
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4375_1-v2.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4422_1600px.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4487_1600px.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4300_1600px.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4131_1600px.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4228_1600px.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4206_1600px.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4243_1600px.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4338_1600px.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4432_1600px.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4456_1600px.jpg'
+];
+
+const VIBE_IMAGES = [
+  'https://victorchurchill.com/cdn/shop/t/55/assets/interior.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4422_1600px.jpg',
+  'https://victorchurchill.com/cdn/shop/t/55/assets/exterior.jpeg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4487_1600px.jpg',
+  'https://www.hgwalter.com/cdn/shop/files/HG_Walter_shop_counter_1000x.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4300_1600px.jpg',
+  'https://schallerweber.com/cdn/shop/files/schaller-weber-store-circa-1941.jpg',
+  'https://victorchurchill.com/cdn/shop/t/55/assets/ageing.jpeg',
+  'https://www.petergbouchier.com.au/cdn/shop/files/June_2024_Photoshoot_SimonShiff_16.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4131_1600px.jpg',
+  'https://victorchurchill.com/cdn/shop/t/55/assets/charcuterie.jpeg',
+  'https://www.vicsmeat.com.au/cdn/shop/articles/A7A3130_7a429a6c-ea2e-480d-8297-8585fca76cb0_600x.jpg',
+  'https://schallerweber.com/cdn/shop/files/schaller-weber-store-customer-meat-display.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4243_1600px.jpg',
+  'https://www.petergbouchier.com.au/cdn/shop/files/June_2024_Photoshoot_SimonShiff_18.jpg',
+  'https://victorchurchill.com/cdn/shop/t/55/assets/details.jpeg',
+  'https://www.hgwalter.com/cdn/shop/files/himalayan_salt_fridge_01_1db466ed-68ae-4d3d-8a0b-1ac8765e5a16_1000x.png',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4338_1600px.jpg',
+  'https://thegingerpig.co.uk/wp-content/uploads/2023/09/GingerPig_MoxonSt_2x_b48667e9-7ce5-4ee8-b76b-908e8d1060a5_614x258.webp',
+  'https://schallerweber.com/cdn/shop/files/schaller-weber-vintage-car.jpg',
+  'https://images.getbento.com/accounts/9b538b411969012cae21d9538f3b2813/media/images/32274MarlowandDaughters_summer_2022-107.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4432_1600px.jpg',
+  'https://www.vicsmeat.com.au/cdn/shop/articles/ChadstoneLaunch_VicsMeats_March2025_Socials_006_600x.jpg',
+  'https://theistanbulbutcher.com/wp-content/uploads/2017/09/mbp_4456_1600px.jpg'
+];
+
+const SHOPS = [
+  {
+    id: 1, name: "Victor Churchill", location: "Woollahra, Sydney", country: "Australia", city: "sydney",
+    heritage: "Est. 1876", realPhotos: true,
+    feature: "Anthony Bourdain called it 'the most beautiful butcher shop in the world.' Himalayan pink salt walls, brass fittings, marble counters, glass-walled dry-aging cabinet.",
+    long: "Australia's oldest continually run butcher shop. The 2009 redesign by Michael McCann and Dreamtime Australia Design won 'Best of the Year' at New York's International Interior Design Awards in 2010 — the first butcher shop ever nominated. Custom brass fittings, hand-carved copper fretwork, Italian Calacatta marble flooring book-matched into mosaics, dry-aging room with floor-to-ceiling Himalayan salt brick wall, glass-walled live butchery stage. The original sandstone wall (discovered during demolition) was preserved.",
+    tags: ["Brass + Marble", "Himalayan salt wall", "Michael McCann", "Window butchery"],
+    website: "https://victorchurchill.com",
+    instagram: "https://instagram.com/victorchurchill.sydney",
+    images: [
+      'https://victorchurchill.com/cdn/shop/t/55/assets/interior.jpg',
+      'https://victorchurchill.com/cdn/shop/t/55/assets/exterior.jpeg',
+      'https://victorchurchill.com/cdn/shop/t/55/assets/ageing.jpeg',
+      'https://victorchurchill.com/cdn/shop/t/55/assets/charcuterie.jpeg',
+      'https://victorchurchill.com/cdn/shop/t/55/assets/details.jpeg',
+      'https://victorchurchill.com/cdn/shop/t/55/assets/store.jpg',
+      'https://victorchurchill.com/cdn/shop/t/55/assets/slide1.jpg',
+      'https://victorchurchill.com/cdn/shop/t/55/assets/slide2.jpg',
+      'https://victorchurchill.com/cdn/shop/t/55/assets/slide3.jpg',
+      'https://victorchurchill.com/cdn/shop/t/55/assets/slide5.jpg',
+      'https://victorchurchill.com/cdn/shop/t/55/assets/slide7.jpg',
+      'https://victorchurchill.com/cdn/shop/t/55/assets/slide12.jpg'
+    ]
+  },
+  {
+    id: 21, name: "The Istanbul Butcher", location: "Kadıköy, Istanbul", country: "Turkey", city: "istanbul",
+    heritage: "Est. 2017 (Nezih Gıda since 1962)", realPhotos: true,
+    feature: "Designed by Michael McCann — the same architect behind Victor Churchill. Brass, marble, theatrical 'Butcher Theater' space showcasing the craft.",
+    long: "The Istanbul Butcher was created by Nezih Gıda (Turkish food retailer since 1962) and designed by Michael McCann — the legendary architect behind Sydney's Victor Churchill. McCann was specifically tasked with redefining the butcher-shop category not just for Istanbul, but for Europe and Asia. The shop features a 'Butcher Theater' area where butchers perform their craft in full transparency. Premium meats, dishes from a chef's kitchen, desserts, and wines. Same McCann DNA as Victor Churchill: brass, marble, theatrical display, immersive multi-sensory experience.",
+    tags: ["Michael McCann", "Butcher Theater", "Brass + Marble", "Multi-category"],
+    website: "https://theistanbulbutcher.com",
+    instagram: "https://instagram.com/theistanbulbutcher",
+    images: ISTANBUL_IMGS
+  },
+  {
+    id: 22, name: "The Hyun", location: "Gramercy Park, NYC", country: "USA", city: "newyork",
+    heritage: "Est. 2024", realPhotos: false,
+    feature: "Premium Japanese Wagyu boutique with Japanese minimalist aesthetic. Glossy black marble, glowing display shelves — closer to a Chanel boutique than a butcher shop.",
+    long: "The Hyun opened in Gramercy Park in 2024 as a sister to Michelin-starred restaurant Hyun, the first dedicated Japanese A5 Wagyu butcher boutique of its kind in the US. The design is a tribute to Japanese minimalism: glossy black marble, two stone cubes at the entrance resembling butcher blocks, long refrigerated glass cases showcasing 50+ A5 Wagyu cuts that glow like a luxury atelier. At the heart of the shop is The Hyun Collection — handpicked cuts placed in wooden box sets of 3 or 6, beautifully wrapped in Bojagi (traditional Korean colorful silk wrapping with decorative tassels). A reference for the future of premium butcher retail: less is more, gift-as-art, and Asian luxury sensibility applied to meat.",
+    tags: ["Japanese minimalism", "Black marble", "A5 Wagyu", "Bojagi wrapping"],
+    website: "https://www.thehyun.com",
+    instagram: "https://instagram.com/thehyunbutcher",
+    images: [
+      'https://cdn.prod.website-files.com/666d9613832653f698f779d2/66e03e201d1cb84078dcf6e4_Maestro%20Collection%20Gift%20Sets-min.jpg',
+      'https://cdn.prod.website-files.com/666d9613832653f698f779d2/667369ce20f1caf663f6f181_Screenshot%202024-06-19%20at%207.28.59%E2%80%AFPM.png',
+      'https://cdn.prod.website-files.com/666d9613832653f698f779d2/6672f44ba92a5a7482592a96_Screenshot%202024-06-19%20at%2011.07.35%E2%80%AFAM.png',
+      UNS('1584873069262-427e437b8eb4'),
+      UNS('1753440343939-13984b0e9aa7')
+    ]
+  },
+  {
+    id: 2, name: "Hill & Szrok", location: "Broadway Market, London", country: "UK", city: "london",
+    heritage: "Est. 2013", realPhotos: false,
+    feature: "Marble-topped communal table doubles as a butcher counter by day and a chef's-table restaurant by night.",
+    long: "Hill & Szrok runs as a traditional butcher specializing in free-range and organic meats from small English farms during the day, and transforms into a buzzy 25-seat restaurant at night. Diners eat around the same marble slab where animals are broken down each morning. The concept revives the 17th-century 'cookshop' tradition. A model for any project that wants to blur retail and hospitality.",
+    tags: ["Marble counter", "Day/night transformation", "Communal table", "Cookshop revival"],
+    website: "https://www.hillandszrok.co.uk",
+    instagram: "https://instagram.com/hillandszrok",
+    images: [UNS('1597417321971-45e034f7a993'), UNS('1632154023554-c2975e9be348'), UNS('1502333052765-1424f32cf5ca'), UNS('1592686092916-672fa9e86866'), UNS('1611764197743-702a4d01463b')]
+  },
+  {
+    id: 3, name: "Hugo Desnoyer", location: "16th arr., Paris", country: "France", city: "paris",
+    heritage: "Est. 2006", realPhotos: false,
+    feature: "Dark, gallery-like interior with paintings on the walls. Meat displayed like art objects.",
+    long: "Hugo Desnoyer is the rockstar butcher of Paris, supplier to many Michelin kitchens. Intentionally dimly lit, with charcoal walls, gilded mirrors, and oil paintings on the walls — closer to a wine bar than a traditional French boucherie. Meat displayed with restraint, often a single piece on white porcelain. Less is more, and meat deserves the same staging as fine art.",
+    tags: ["Gallery aesthetic", "Dark walls", "Curated display", "Editorial restraint"],
+    website: "https://www.hugodesnoyer.com",
+    instagram: "https://instagram.com/hugodesnoyer",
+    images: [UNS('1736517884171-a981a34e78a4'), UNS('1740586222627-48338edac67d'), UNS('1768962286432-cf190fecb2e2'), UNS('1632154023554-c2975e9be348'), UNS('1606677661991-446cea8ee182')]
+  },
+  {
+    id: 4, name: "Dickson's Farmstand Meats", location: "Chelsea Market, NYC", country: "USA", city: "newyork",
+    heritage: "Est. 2009", realPhotos: false,
+    feature: "Inside iconic Chelsea Market. Bright white tile, polished stainless, blackboard signage. Every cut labeled with the farm of origin.",
+    long: "Inside Chelsea Market, Dickson's Farmstand makes a deliberate counterpoint to the rough brick of the building: bright white tile, polished stainless, neat blackboard signage in chalk. Owner Jake Dickson opened in 2009 with a single-origin philosophy — every cut traces back to a small family farm in upstate New York. Strong reference for a clean, almost clinical aesthetic that still feels warm because of natural light and material honesty.",
+    tags: ["White tile", "Stainless steel", "Farm traceability", "Bright + clean"],
+    website: "https://www.dicksonsfarmstand.com",
+    instagram: "https://instagram.com/dicksonsfarmstand",
+    images: [UNS('1584873069262-427e437b8eb4'), UNS('1598902507944-679c1f6d4081'), UNS('1589372545389-bb4d9d138bdb'), UNS('1584048603508-4b31894439a9'), UNS('1625643269470-5d3e7b69fa34')]
+  },
+  {
+    id: 5, name: "Schaller & Weber", location: "Upper East Side, NYC", country: "USA", city: "newyork",
+    heritage: "Est. 1937", realPhotos: true,
+    feature: "1937 German butcher at 86th & 2nd. Original storefront with vintage signage, hanging salamis.",
+    long: "Ferdinand Schaller apprenticed in Stuttgart, sailed to NYC, and opened with Tony Weber in 1937 in Yorkville. Nearly 90 years later, Jeremy Schaller (Ferdinand's grandson) runs the same shop. The 1941 storefront is intact — vintage signage, original wood paneling, hanging strings of sausages. Anthony Bourdain called it his go-to for bacon in 'Kitchen Confidential.' Adjacent: Schaller's Stube. Patina and authenticity beat any contemporary design move.",
+    tags: ["Heritage preserved", "Vintage signage", "Charcuterie display", "Bourdain favorite"],
+    website: "https://schallerweber.com",
+    instagram: "https://instagram.com/schallerweber",
+    images: [
+      'https://schallerweber.com/cdn/shop/files/schaller-weber-store-circa-1941.jpg',
+      'https://schallerweber.com/cdn/shop/files/schaller-weber-store-customer-meat-display.jpg',
+      'https://schallerweber.com/cdn/shop/files/jeremy-schaller-behind-counter-schaller-weber-store-today.jpg',
+      'https://schallerweber.com/cdn/shop/files/schaller-weber-vintage-car.jpg',
+      'https://schallerweber.com/cdn/shop/files/schaller-weber-factory.jpg',
+      'https://schallerweber.com/cdn/shop/files/young-ferdinand-schaller.jpg'
+    ]
+  },
+  {
+    id: 6, name: "Allens of Mayfair", location: "Mayfair, London", country: "UK", city: "london",
+    heritage: "Est. 1830", realPhotos: false,
+    feature: "London's oldest butcher. Black-and-gold shopfront, mahogany interior, brass rails. Royal warrant heritage.",
+    long: "Few shops do British heritage with as much commitment as Allens. Black-and-gold gilt-lettered exterior, mahogany cabinetry, brass rails for hanging carcasses — preserved through nearly two centuries. Scottish beef hung at least 21 days, free-range North York Moors pork. The typography and gold signage do enormous work.",
+    tags: ["Heritage", "Gilt signage", "Mahogany", "British classic"],
+    website: "https://www.allensofmayfair.co.uk",
+    instagram: "https://instagram.com/allensofmayfair",
+    images: [UNS('1632084687062-522d7b1d4b95'), UNS('1542581482-851c38ee4b94'), UNS('1540380968028-950d9ea1507e'), UNS('1771810293576-97c8ded7ce09'), UNS('1759997956694-55411e03aecf')]
+  },
+  {
+    id: 7, name: "The Meat Hook", location: "Williamsburg, NYC", country: "USA", city: "newyork",
+    heritage: "Est. 2009", realPhotos: false,
+    feature: "Brooklyn whole-animal butchery. 100% grass-fed beef, pasture-raised pork. Tattoo-shop swagger applied to butchery.",
+    long: "Founded in 2009, The Meat Hook does whole-animal butchery from small NY-state family farms — all beef 100% grass-fed, pork and lamb pasture-raised. The shop has expanded into produce, prepared foods, and an in-house sausage program. Hands-on classes in knife skills, chicken/pig butchery, beef breaking from adjacent space on Skillman Ave.",
+    tags: ["Whole-animal", "Brooklyn DIY", "Hand-drawn", "Classes"],
+    website: "https://www.themeathook.com",
+    instagram: "https://instagram.com/themeathook",
+    images: [UNS('1759026562009-c50112f4fe93'), UNS('1615937662601-4724eceda00f'), UNS('1597417321971-45e034f7a993'), UNS('1763387988108-082db26397c2'), UNS('1768962286432-cf190fecb2e2')]
+  },
+  {
+    id: 8, name: "Maison Le Bourdonnec", location: "5 Paris arrondissements", country: "France", city: "paris",
+    heritage: "Est. 1996", realPhotos: false,
+    feature: "Yves-Marie Le Bourdonnec's modern empire. Sleek black storefronts in the 6th, 7th, 8th, 16th, 17th.",
+    long: "Le Bourdonnec has redefined the modern Parisian butcher aesthetic across five Paris shops. Each follows the same DNA: matte black exterior, gold serif lettering, marble counters, well-spaced display. Smallest is just 15m². Philosophy: 'less quantity, exceptional quality.' Aging techniques are their signature.",
+    tags: ["Black + gold", "Boutique luxury", "Branded chain", "Five locations"],
+    website: "https://maisonlebourdonnec.com",
+    instagram: "https://instagram.com/lebourdonnec_official",
+    images: [UNS('1542581482-851c38ee4b94'), UNS('1736517884171-a981a34e78a4'), UNS('1540380968028-950d9ea1507e'), UNS('1564227502985-91742d806cff'), UNS('1719586902338-bbfa49db95fc')]
+  },
+  {
+    id: 9, name: "The Butchery Ltd", location: "Bermondsey, London", country: "UK", city: "london",
+    heritage: "Est. 2012", realPhotos: false,
+    feature: "Whole-animal butchery in Bermondsey's Spa Terminus. Pared-back Scandi-British minimalism. Rare native breeds.",
+    long: "The Butchery Ltd buys whole-animal carcasses, butchering nose-to-tail in the traditional manner. Free-range, chemical-free, rare and native breed, pasture-fed. Open from their Bermondsey Spa Terminus production space every Saturday.",
+    tags: ["Whole-animal", "Native breed", "Spa Terminus", "Saturday-only"],
+    website: "https://thebutcheryltd.com",
+    instagram: "https://instagram.com/thebutcheryltd",
+    images: [UNS('1602470521007-20293bd1fd31'), UNS('1616631124348-c63521eb484c'), UNS('1502333052765-1424f32cf5ca'), UNS('1611764197743-702a4d01463b'), UNS('1632154023554-c2975e9be348')]
+  },
+  {
+    id: 10, name: "Peter Bouchier", location: "Toorak + Malvern, Melbourne", country: "Australia", city: "melbourne",
+    heritage: "Est. 1983", realPhotos: true,
+    feature: "Melbourne's premium butcher for 40+ years. Toorak flagship + Malvern with state-of-the-art dry-aging cabinet.",
+    long: "Peter and Sue Bouchier purchased the original Malvern Road shop in 1983 and built a Melbourne institution. The Toorak store is the flagship — boutique scale, premium display, multi-generational family team. Malvern Central opened in 2017 with a state-of-the-art dry-aging cabinet. A study in scaling a premium butcher concept across two retail sites plus wholesale.",
+    tags: ["Premium boutique", "Dry-aging cabinet", "Family-run", "Multi-location"],
+    website: "https://www.petergbouchier.com.au",
+    instagram: "https://instagram.com/peterbouchier",
+    images: [
+      'https://www.petergbouchier.com.au/cdn/shop/files/June_2024_Photoshoot_SimonShiff_16.jpg',
+      'https://www.petergbouchier.com.au/cdn/shop/files/June_2024_Photoshoot_SimonShiff_18.jpg',
+      'https://www.petergbouchier.com.au/cdn/shop/files/June_2024_Photoshoot_SimonShiff_1.jpg',
+      'https://www.petergbouchier.com.au/cdn/shop/files/June_2024_Photoshoot_SimonShiff_14.jpg',
+      'https://www.petergbouchier.com.au/cdn/shop/files/June_2024_Photoshoot_Finals.jpg',
+      'https://www.petergbouchier.com.au/cdn/shop/files/Peter_Bouchier_Finals_June_2024.jpg'
+    ]
+  },
+  {
+    id: 11, name: "Cannings Free Range Butchers", location: "Multiple, Melbourne", country: "Australia", city: "melbourne",
+    heritage: "Est. 2010", realPhotos: false,
+    feature: "Melbourne's most trusted free-range and high-welfare butcher. Warm timber and educational signage.",
+    long: "Cannings built its design around its ethics: free-range, traceable, slow. The shops use warm timber, blackboards with farm names and animal welfare standards, and signage that explains rather than sells. Closer to a farm shop than a traditional butcher.",
+    tags: ["Free-range", "Warm timber", "Educational signage", "Values-led"],
+    website: "https://canningsbutchers.com.au",
+    instagram: "https://instagram.com/canningsfreerange",
+    images: [UNS('1695606392727-d8b959879721'), UNS('1616631124348-c63521eb484c'), UNS('1502333052765-1424f32cf5ca'), UNS('1611764197743-702a4d01463b'), UNS('1602470521007-20293bd1fd31')]
+  },
+  {
+    id: 12, name: "Boucherie Polmard", location: "6th & 7th arr., Paris", country: "France", city: "paris",
+    heritage: "6 generations", realPhotos: false,
+    feature: "Six-generation family from Meuse. Blonde d'Aquitaine cattle raised on their own farm. Beef aged using 'hibernation' technique.",
+    long: "Polmard has been in the family for six generations in Meuse, combining cattle raising, butchery, and a restaurant. The Paris shops display aged Blonde d'Aquitaine in glass vitrines like a jeweler displays diamonds. Flagship at 7 allée du Beaupassage with two floors dedicated to meat, and a 'chic stable' restaurant upstairs.",
+    tags: ["Museum vitrines", "Vertical integration", "Luxury maison", "Restaurant upstairs"],
+    website: "https://www.boucherie-polmard.fr",
+    instagram: "https://instagram.com/polmardboucherie",
+    images: [UNS('1584873069262-427e437b8eb4'), UNS('1753440343939-13984b0e9aa7'), UNS('1736517884171-a981a34e78a4'), UNS('1632154023554-c2975e9be348'), UNS('1606677661991-446cea8ee182')]
+  },
+  {
+    id: 13, name: "HG Walter", location: "Barons Court, London", country: "UK", city: "london",
+    heritage: "Est. 1972", realPhotos: true,
+    feature: "Family butcher since 1972. Custom Himalayan salt room for 28-90 day dry aging. Supplies River Café and many Michelin kitchens.",
+    long: "Founded 1972 by Peter Heanen, still family-run. The Barons Court shop has classic Victorian tile, scrubbed wooden counters, natural daylight. Dry-aging happens in a custom-made Himalayan salt-walled room (28 to 90 days). Supplies River Café, Kricket, and hundreds of London restaurants. When the architecture is good, get out of its way.",
+    tags: ["Victorian tile", "Himalayan salt room", "Family-run", "Chef's go-to"],
+    website: "https://www.hgwalter.com",
+    instagram: "https://instagram.com/hgwalter",
+    images: [
+      'https://www.hgwalter.com/cdn/shop/files/HG_Walter_shop_counter_1000x.jpg',
+      'https://www.hgwalter.com/cdn/shop/files/himalayan_salt_fridge_01_1db466ed-68ae-4d3d-8a0b-1ac8765e5a16_1000x.png',
+      'https://www.hgwalter.com/cdn/shop/files/Peter_Heanen_and_chefs_400x.jpg',
+      'https://www.hgwalter.com/cdn/shop/files/HG_Walter_family_400x.jpg',
+      UNS('1632084687062-522d7b1d4b95'),
+      UNS('1740586222627-48338edac67d')
+    ]
+  },
+  {
+    id: 14, name: "Marlow & Daughters", location: "Williamsburg, NYC", country: "USA", city: "newyork",
+    heritage: "Est. 2009", realPhotos: true,
+    feature: "Whole-animal butchery from upstate NY farms. Sister to Diner/Marlow & Sons. Reclaimed wood and hand-illustrated charts.",
+    long: "Created to serve 100% grass-fed beef at sister restaurant Diner — they bought whole animals direct from farmers. The shop at 95 Broadway is small, tightly merchandised: reclaimed wood, vintage scales, prepared-foods counter, hand-illustrated chart of cuts on the wall. Same animals appear at Diner, Marlow & Sons, Roman's, Achilles Heel.",
+    tags: ["Whole-animal", "Restaurant-connected", "Reclaimed wood", "Prepared foods"],
+    website: "https://www.marlowanddaughters.com",
+    instagram: "https://instagram.com/marlowanddaughters",
+    images: [
+      'https://images.getbento.com/accounts/9b538b411969012cae21d9538f3b2813/media/images/32274MarlowandDaughters_summer_2022-107.jpg',
+      'https://images.getbento.com/accounts/9b538b411969012cae21d9538f3b2813/media/images/44828MarlowandDaughters_summer_2022-139.jpg',
+      UNS('1678572823447-45fc146df43c'),
+      UNS('1611764197743-702a4d01463b'),
+      UNS('1502333052765-1424f32cf5ca')
+    ]
+  },
+  {
+    id: 15, name: "Vic's Premium Quality Meat", location: "Bondi/Chatswood/Mascot Sydney + Chadstone Melbourne", country: "Australia", city: "sydney",
+    heritage: "Est. 1996", realPhotos: true,
+    feature: "Sydney's chef's butcher. Industrial dry-aging walls visible through glass. Four retail showrooms.",
+    long: "Founded in 1996 by Victor and Anthony Puharich (same family behind Victor Churchill), Vic's grew from wholesale into Australia's leading premium meat distributor. Retail stores at Bondi Junction, Chatswood Chase, Chadstone, Mascot Saturday outlet. Industrial-luxe aesthetic with theatrical dry-aging displays. Sydney HQ houses Australia's largest dry-aging room.",
+    tags: ["Industrial luxe", "Open aging", "Four locations", "Chef-grade quality"],
+    website: "https://www.vicsmeat.com.au",
+    instagram: "https://instagram.com/vicsthechefsbutcher",
+    images: [
+      'https://www.vicsmeat.com.au/cdn/shop/articles/A7A3130_7a429a6c-ea2e-480d-8297-8585fca76cb0_600x.jpg',
+      'https://www.vicsmeat.com.au/cdn/shop/articles/ChadstoneLaunch_VicsMeats_March2025_Socials_006_600x.jpg',
+      'https://www.vicsmeat.com.au/cdn/shop/articles/Screenshot_2025-05-05_at_4.51.57_pm_4f535d9d-4d6a-4339-a7ac-deec36271687_600x.png',
+      'https://www.vicsmeat.com.au/cdn/shop/articles/VIC0G0A8053_ac112eef-8985-4e15-8d77-a190e7307e27_600x.jpg',
+      UNS('1759997956694-55411e03aecf')
+    ]
+  },
+  {
+    id: 16, name: "The Quality Chop Shop", location: "Farringdon, London", country: "UK", city: "london",
+    heritage: "Est. 1869 (shop 2017)", realPhotos: false,
+    feature: "Butcher and café next door to the legendary 150-year-old Quality Chop House restaurant.",
+    long: "The Quality Chop House celebrated 150 years in 2019. The shop and café opened next door — wines, butcher, café, grocer rolled into one. Original Grade-II listed Victorian frame, dark wood, brass fittings. QCH executive chef Shaun Searley sources directly from the next-door butcher. Photography by Sam Harris and Andrew Montgomery.",
+    tags: ["Victorian heritage", "Restaurant-connected", "Wine + butcher", "Grade-II listed"],
+    website: "https://shop.thequalitychophouse.com",
+    instagram: "https://instagram.com/qualitychop",
+    images: [UNS('1632084687062-522d7b1d4b95'), UNS('1542581482-851c38ee4b94'), UNS('1740586222627-48338edac67d'), UNS('1598959652545-c0230cdbb01f'), UNS('1540380968028-950d9ea1507e')]
+  },
+  {
+    id: 17, name: "Turner & George", location: "St John Street, London", country: "UK", city: "london",
+    heritage: "Est. 2010", realPhotos: true,
+    feature: "Founded by Hawksmoor/Pitt Cue chef Richard Turner + butcher James George. Near Fergus Henderson's St. John.",
+    long: "Turner & George began as the East London Steak Company in 2010 and quickly became three shops on St John Street, Waterloo, and Camberwell. Acclaimed restaurateur Richard H. Turner (Hawksmoor, Pitt Cue, Blacklock) partnered with butcher James George to bring chef-quality consistency to the high street. British native breeds, dry-aged on the bone.",
+    tags: ["Chef-driven", "British native breeds", "Multi-location", "Restrained shopfit"],
+    website: "https://www.turnerandgeorge.co.uk",
+    instagram: "https://instagram.com/turnerandgeorge",
+    images: [
+      'https://cdn.shopify.com/s/files/1/0566/5642/9115/files/aboutusrichjamesdesktop_1.png',
+      'https://cdn.shopify.com/s/files/1/0566/5642/9115/files/JamesGeorgeandMatKemp_480x480.jpg',
+      UNS('1632084687062-522d7b1d4b95'),
+      UNS('1564227502985-91742d806cff'),
+      UNS('1740586222627-48338edac67d')
+    ]
+  },
+  {
+    id: 18, name: "The Ginger Pig", location: "Marylebone + 7 branches, London", country: "UK", city: "london",
+    heritage: "Est. 1998", realPhotos: true,
+    feature: "Eight London neighborhoods. Founded with three Tamworth pigs. Famous sausage rolls and roast lunches.",
+    long: "Founder Tim Wilson bought three Tamworth pigs and built an eight-shop London empire. Consistent visual language: warm timber, blackboards with handwritten daily specials, white tile, pendant lighting. Marylebone flagship on Moxon Street doubles as a takeaway counter — famous sausage rolls generate daily queues. Nightly butchery classes happen in-store.",
+    tags: ["Multi-location", "Farm-owned", "Take-away counter", "Butchery classes"],
+    website: "https://www.thegingerpig.co.uk",
+    instagram: "https://instagram.com/gingerpigltd",
+    images: [
+      'https://thegingerpig.co.uk/wp-content/uploads/2023/09/GingerPig_MoxonSt_2x_b48667e9-7ce5-4ee8-b76b-908e8d1060a5_614x258.webp',
+      'https://thegingerpig.co.uk/wp-content/uploads/2026/05/GingerPighamper-2-1.jpg',
+      UNS('1632084687062-522d7b1d4b95'),
+      UNS('1740586222627-48338edac67d'),
+      UNS('1598959652545-c0230cdbb01f')
+    ]
+  },
+  {
+    id: 19, name: "Keevil & Keevil", location: "Smithfield Market, London", country: "UK", city: "london",
+    heritage: "Smithfield since 1850", realPhotos: true,
+    feature: "Oldest butcher in London's Smithfield Market — 175 years on site. Inside the Victorian iron-and-glass market hall.",
+    long: "The Keevil family has been on Smithfield since 1850, 175 years of continuous trading. Started as wholesale supplying butchers' shops and central London hotels. The Smithfield Market hall is one of London's most architecturally important buildings — Victorian iron and glass by Sir Horace Jones (1860s). Crocodile, kangaroo, wild boar, Wagyu.",
+    tags: ["Smithfield Market", "Wholesale heritage", "Exotic meats", "Victorian ironwork"],
+    website: "https://www.keevilandkeevil.co.uk",
+    instagram: "https://www.facebook.com/keevils",
+    images: [
+      'https://www.keevilandkeevil.co.uk/Themes/CoreTheme/KContent/images/shop-bgimg.jpg',
+      UNS('1759997956694-55411e03aecf'),
+      UNS('1759026562009-c50112f4fe93'),
+      UNS('1771810293576-97c8ded7ce09'),
+      UNS('1740586222627-48338edac67d')
+    ]
+  },
+  {
+    id: 20, name: "William Rose", location: "East Dulwich, London", country: "UK", city: "london",
+    heritage: "Est. 1862", realPhotos: false,
+    feature: "Founded 1862 in Vauxhall, moved to East Dulwich 2005. Rare-breed beef, salt-marsh lamb, Blythburgh pork.",
+    long: "Family-owned, one of London's oldest butchers (160+ years). Moved to East Dulwich in 2005, Saturday queues followed. Distinctive black-and-gold signage; the interior is bright, clean, traditional. Rare-breed beef like Longhorn and Red Poll, sold fully aged on the bone (14-20 days depending on breed). A reference for repositioning heritage for a younger neighborhood without losing authority.",
+    tags: ["Heritage modernized", "Rare-breed beef", "Apprentice training", "Saturday queues"],
+    website: "https://www.williamrosebutchers.co.uk",
+    instagram: "https://instagram.com/williamrosebutchers",
+    images: [UNS('1542581482-851c38ee4b94'), UNS('1632084687062-522d7b1d4b95'), UNS('1564227502985-91742d806cff'), UNS('1598959652545-c0230cdbb01f'), UNS('1604867708678-dad657e961ce')]
+  }
+];
+
+// ============================================================
+// RENDER
+// ============================================================
+const vibeBoard = document.getElementById('vibeBoard');
+VIBE_IMAGES.forEach((url, i) => {
+  const el = document.createElement('div');
+  el.className = 'vibe-item';
+  el.style.animationDelay = (i * 30) + 'ms';
+  el.innerHTML = `
+    <img class="vibe-img" src="${url}" loading="lazy" alt="Butcher shop atmosphere">
+    ${heartButton(url)}
+  `;
+  el.addEventListener('click', (e) => {
+    if (e.target.closest('.heart-btn')) return;
+    openLightbox(url);
+  });
+  vibeBoard.appendChild(el);
+});
+
+const grid = document.getElementById('grid');
+const modalBg = document.getElementById('modalBg');
+const modal = document.getElementById('modal');
+
+function renderGrid(filter = 'all') {
+  grid.innerHTML = '';
+  const filtered = filter === 'all' ? SHOPS : SHOPS.filter(s => s.city === filter);
+  filtered.forEach((shop, i) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.animationDelay = (i * 40) + 'ms';
+    card.innerHTML = `
+      <div class="card-img-wrap">
+        <img class="card-img" src="${shop.images[0]}" alt="${shop.name}" loading="lazy">
+        <div class="card-img-overlay"></div>
+        ${shop.heritage ? `<div class="card-heritage-badge">${shop.heritage}</div>` : ''}
+        <div class="card-gallery-count">${shop.images.length} pics</div>
+        ${heartButton(shop.images[0])}
+        ${shop.realPhotos ? `<div class="card-real-badge">★ Real Photos</div>` : ''}
+      </div>
+      <div class="card-body">
+        <div class="city-pill">${shop.country}</div>
+        <h3>${shop.name}</h3>
+        <div class="location">${shop.location}</div>
+        <div class="feature">${shop.feature}</div>
+        <span class="read-more">Open mood ↗</span>
+      </div>
+    `;
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.heart-btn')) return;
+      openModal(shop);
+    });
+    grid.appendChild(card);
+  });
+  updateLikeUI();
+}
+
+function openModal(shop) {
+  modal.innerHTML = `
+    <div class="modal-hero">
+      <img src="${shop.images[0]}" alt="${shop.name}">
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-city">${shop.location} · ${shop.country} · ${shop.heritage}${shop.realPhotos ? ' · ★ Real Photos' : ''}</div>
+      <h2>${shop.name}</h2>
+      <div class="modal-feature">${shop.feature}</div>
+
+      <div class="modal-section">
+        <h4>The Story</h4>
+        <p>${shop.long}</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>${shop.realPhotos ? 'Shop Gallery' : 'Atmosphere Gallery'} — click ♥ to save favorites</h4>
+        <div class="gallery">
+          ${shop.images.map(url => `
+            <div class="gallery-img">
+              <img src="${url}" loading="lazy" alt="${shop.name}" onclick="openLightbox('${url}')">
+              <div class="gallery-zoom" onclick="openLightbox('${url}')">⤢</div>
+              ${heartButton(url)}
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <h4>Design Notes</h4>
+        <div class="modal-tags">${shop.tags.map(t => `<span class="modal-tag">${t}</span>`).join('')}</div>
+      </div>
+
+      <div class="modal-links">
+        <a class="modal-link" href="${shop.website}" target="_blank" rel="noopener">Visit Website ↗</a>
+        <a class="modal-link secondary" href="${shop.instagram}" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+    </div>
+  `;
+  modalBg.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  modalBg.scrollTop = 0;
+  updateLikeUI();
+}
+
+function closeModal() {
+  modalBg.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+modalBg.addEventListener('click', (e) => { if (e.target === modalBg) closeModal(); });
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (document.getElementById('lightbox').classList.contains('open')) closeLightbox();
+    else closeModal();
+  }
+});
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderGrid(btn.dataset.filter);
+  });
+});
+
+// LIGHTBOX
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxHeart = document.getElementById('lightboxHeart');
+
+function openLightbox(src) {
+  lightboxImg.src = src;
+  lightboxHeart.dataset.url = src;
+  if (isLiked(src)) lightboxHeart.classList.add('liked');
+  else lightboxHeart.classList.remove('liked');
+  lightbox.classList.add('open');
+}
+function closeLightbox() { lightbox.classList.remove('open'); }
+function toggleLikeCurrent() {
+  const url = lightboxHeart.dataset.url;
+  if (!url) return;
+  toggleLike(url);
+  lightboxHeart.classList.add('just-liked');
+  setTimeout(() => lightboxHeart.classList.remove('just-liked'), 400);
+}
+
+// LIKED GRID
+const likedGrid = document.getElementById('likedGrid');
+function renderLikedGrid() {
+  const likedArr = [...LIKES];
+  if (likedArr.length === 0) {
+    likedGrid.innerHTML = `<div class="liked-empty">
+      <span class="heart-icon">♥</span>
+      Click the heart on any image to save it here.<br>
+      Your favorites stay between sessions.
+    </div>`;
+    return;
+  }
+  likedGrid.innerHTML = likedArr.map((url, i) => `
+    <div class="liked-item" style="animation-delay: ${i * 20}ms">
+      <img src="${url}" loading="lazy" onclick="openLightbox('${url}')">
+      ${heartButton(url)}
+    </div>
+  `).join('');
+}
+
+// YOUR OWN
+const STORAGE_KEY = 'butcher_moodboard_user_images';
+const yourGrid = document.getElementById('yourGrid');
+const yourForm = document.getElementById('yourForm');
+const yourUrl = document.getElementById('yourUrl');
+function loadUserImages() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch { return []; } }
+function saveUserImages(arr) { localStorage.setItem(STORAGE_KEY, JSON.stringify(arr)); }
+function renderUserImages() {
+  const images = loadUserImages();
+  if (images.length === 0) {
+    yourGrid.innerHTML = '<div class="your-empty">Your saved images will appear here. Add your first one above.</div>';
+    return;
+  }
+  yourGrid.innerHTML = images.map((url, i) => `
+    <div class="your-item">
+      <img src="${url}" loading="lazy" onerror="this.parentElement.classList.add('broken')" onclick="openLightbox('${url}')">
+      <button class="your-item-remove" onclick="event.stopPropagation(); removeUserImage(${i})" title="Remove">×</button>
+      ${heartButton(url)}
+    </div>
+  `).join('');
+  updateLikeUI();
+}
+function removeUserImage(index) {
+  const images = loadUserImages();
+  images.splice(index, 1);
+  saveUserImages(images);
+  renderUserImages();
+}
+yourForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const url = yourUrl.value.trim();
+  if (!url) return;
+  const images = loadUserImages();
+  images.unshift(url);
+  saveUserImages(images);
+  yourUrl.value = '';
+  renderUserImages();
+});
+
+// INIT
+renderGrid();
+renderUserImages();
+updateLikeUI();
+</script>
+
+
+
+</body></html>
